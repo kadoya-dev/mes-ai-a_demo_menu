@@ -35,40 +35,13 @@ h1 {
   font-weight: 700;
 }
 
-.tabs {
-  display: inline-flex;
-  background: #e3e8f4;
-  border-radius: 999px;
-  padding: 6px;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.tab {
-  border: none;
-  background: transparent;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: 600;
-  color: #4b5563;
-  cursor: pointer;
-}
-
-.tab.active {
-  background: #1d4ed8;
-  color: #fff;
-}
-
 .panel {
-  display: none;
+  display: block;
   background: #fff;
   padding: 24px;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-}
-
-.panel.active {
-  display: block;
+  margin-bottom: 24px;
 }
 
 .panel-header {
@@ -94,32 +67,55 @@ h1 {
   flex-wrap: wrap;
 }
 
-.primary,
-.ghost {
-  border: none;
-  border-radius: 999px;
-  padding: 10px 20px;
+.menu-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: #f1f5ff;
+  color: #1d4ed8;
   font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #dbe2ff;
+  min-width: 140px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.menu-tile:hover {
+  transform: translateY(-1px);
+  background: #e0e7ff;
+  box-shadow: 0 10px 18px rgba(29, 78, 216, 0.15);
+}
+
+.csv-button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-weight: 700;
   cursor: pointer;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 12px 22px rgba(5, 150, 105, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.primary {
-  background: #1d4ed8;
-  color: #fff;
-  box-shadow: 0 8px 16px rgba(29, 78, 216, 0.2);
-}
-
-.ghost {
-  background: #fff;
-  color: #1d4ed8;
-  border: 1px solid #c7d2fe;
-}
-
-.primary:hover,
-.ghost:hover {
+.csv-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 16px 26px rgba(5, 150, 105, 0.35);
+}
+
+.csv-icon {
+  background: #ffffff;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 6px;
+  border-radius: 6px;
+  letter-spacing: 0.08em;
 }
 
 .grid {
