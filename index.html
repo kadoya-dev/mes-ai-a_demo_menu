@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div>
-        <p class="eyebrow">メニュー</p>
-        <h1>メニュー画面</h1>
-      </div>
-      <div class="header-actions">
-        <button class="csv-button">
-          <span class="csv-icon" aria-hidden="true">CSV</span>
-          CSV出力
-        </button>
-      </div>
-    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="sidebar-title">メニュー</p>
+        <nav class="sidebar-nav">
+          <a class="menu-tab active" href="#seller-research">セラーリサーチ</a>
+          <a class="menu-tab" href="#asin-research">ASINリサーチ</a>
+          <a class="menu-tab" href="#logout">ログアウト</a>
+        </nav>
+      </aside>
 
-    <main>
-      <section class="panel" id="daily">
+      <div class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">サマリー</p>
+            <h1>メニュー画面</h1>
+          </div>
+          <div class="header-actions">
+            <button class="csv-button">
+              <span class="csv-icon" aria-hidden="true">CSV</span>
+              CSV出力
+            </button>
+          </div>
+        </header>
+
+        <main>
+          <section class="panel" id="daily">
         <div class="panel-header">
           <div>
             <h2>デイリー サマリー</h2>
             <p>最新データを一覧で確認できます。</p>
-          </div>
-          <div class="panel-actions">
-            <a class="menu-tile" href="#seller-research">セラーリサーチ</a>
-            <a class="menu-tile" href="#asin-research">ASINリサーチ</a>
           </div>
         </div>
         <div class="grid">
@@ -66,15 +73,11 @@
         </div>
       </section>
 
-      <section class="panel" id="weekly">
+          <section class="panel" id="weekly">
         <div class="panel-header">
           <div>
             <h2>ウィークリー サマリー</h2>
             <p>週間の推移を確認できます。</p>
-          </div>
-          <div class="panel-actions">
-            <a class="menu-tile" href="#seller-research">セラーリサーチ</a>
-            <a class="menu-tile" href="#asin-research">ASINリサーチ</a>
           </div>
         </div>
         <div class="grid">
@@ -111,15 +114,11 @@
         </div>
       </section>
 
-      <section class="panel" id="monthly">
+          <section class="panel" id="monthly">
         <div class="panel-header">
           <div>
             <h2>マンスリー サマリー</h2>
             <p>月次の成果を俯瞰できます。</p>
-          </div>
-          <div class="panel-actions">
-            <a class="menu-tile" href="#seller-research">セラーリサーチ</a>
-            <a class="menu-tile" href="#asin-research">ASINリサーチ</a>
           </div>
         </div>
         <div class="grid">
@@ -154,8 +153,9 @@
             <p class="sub">平均: 25.2%</p>
           </article>
         </div>
-      </section>
-    </main>
-
+          </section>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
