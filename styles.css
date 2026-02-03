@@ -262,7 +262,12 @@ h1 {
   color: #1e3a8a;
 }
 
-.legend-chip.average {
+.legend-chip.last-month {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
+}
+
+.legend-chip.total-line {
   background: rgba(245, 158, 11, 0.18);
   color: #b45309;
 }
@@ -287,31 +292,27 @@ h1 {
 }
 
 .bar-column {
-  width: 56px;
+  width: 80px;
   height: var(--total, 180px);
-  background: #e2e8f0;
-  border-radius: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  align-items: end;
+  justify-items: center;
 }
 
 .bar-segment {
   width: 100%;
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.3);
 }
 
-.bar-segment.daily {
-  background: #38bdf8;
-}
-
-.bar-segment.weekly {
-  background: #60a5fa;
-}
-
-.bar-segment.monthly {
+.bar-segment.current {
   background: #2563eb;
+}
+
+.bar-segment.previous {
+  background: #93c5fd;
 }
 
 .bar-label {
