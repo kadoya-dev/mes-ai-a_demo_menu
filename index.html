@@ -11,7 +11,8 @@
       <aside class="sidebar">
         <p class="sidebar-title">メニュー</p>
         <nav class="sidebar-nav">
-          <a class="menu-tab active" href="#seller-research">セラーリサーチ</a>
+          <a class="menu-tab active" href="#menu">メニュー</a>
+          <a class="menu-tab" href="#seller-research">セラーリサーチ</a>
           <a class="menu-tab" href="#asin-research">ASINリサーチ</a>
           <a class="menu-tab" href="#logout">ログアウト</a>
         </nav>
@@ -23,136 +24,267 @@
             <p class="eyebrow">サマリー</p>
             <h1>メニュー画面</h1>
           </div>
-          <div class="header-actions">
-            <button class="csv-button">
-              <span class="csv-icon" aria-hidden="true">CSV</span>
-              CSV出力
-            </button>
-          </div>
         </header>
 
         <main>
-          <section class="panel" id="daily">
+          <section class="panel daily-panel" id="daily">
         <div class="panel-header">
           <div>
             <h2>デイリー サマリー</h2>
             <p>最新データを一覧で確認できます。</p>
           </div>
+          <button class="csv-button small outline">
+            <span class="csv-icon" aria-hidden="true">CSV</span>
+            デイリー
+          </button>
         </div>
         <div class="grid">
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">1,240</p>
-            <p class="sub">平均: 310</p>
+            <div class="subline">
+              <p class="sub">平均: 310</p>
+              <span class="trend up">▲ 先月比 +4%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$42,500</p>
-            <p class="sub">平均: $10,625</p>
+            <div class="subline">
+              <p class="sub">平均: $10,625</p>
+              <span class="trend up">▲ 先月比 +3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$26,180</p>
-            <p class="sub">平均: $6,545</p>
+            <div class="subline">
+              <p class="sub">平均: $6,545</p>
+              <span class="trend down">▼ 先月比 -2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$38,760</p>
-            <p class="sub">平均: $9,690</p>
+            <div class="subline">
+              <p class="sub">平均: $9,690</p>
+              <span class="trend up">▲ 先月比 +5%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$12,580</p>
-            <p class="sub">平均: $3,145</p>
+            <div class="subline">
+              <p class="sub">平均: $3,145</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">29.6%</p>
-            <p class="sub">平均: 27.8%</p>
+            <div class="subline">
+              <p class="sub">平均: 27.8%</p>
+              <span class="trend up">▲ 先月比 +1.8pt</span>
+            </div>
           </article>
         </div>
       </section>
 
-          <section class="panel" id="weekly">
+          <section class="panel weekly-panel" id="weekly">
         <div class="panel-header">
           <div>
             <h2>ウィークリー サマリー</h2>
             <p>週間の推移を確認できます。</p>
           </div>
+          <button class="csv-button small outline">
+            <span class="csv-icon" aria-hidden="true">CSV</span>
+            ウィークリー
+          </button>
         </div>
         <div class="grid">
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">8,960</p>
-            <p class="sub">平均: 1,280</p>
+            <div class="subline">
+              <p class="sub">平均: 1,280</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$318,420</p>
-            <p class="sub">平均: $45,488</p>
+            <div class="subline">
+              <p class="sub">平均: $45,488</p>
+              <span class="trend down">▼ 先月比 -1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$196,300</p>
-            <p class="sub">平均: $28,043</p>
+            <div class="subline">
+              <p class="sub">平均: $28,043</p>
+              <span class="trend down">▼ 先月比 -3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$284,750</p>
-            <p class="sub">平均: $40,679</p>
+            <div class="subline">
+              <p class="sub">平均: $40,679</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$86,800</p>
-            <p class="sub">平均: $12,400</p>
+            <div class="subline">
+              <p class="sub">平均: $12,400</p>
+              <span class="trend up">▲ 先月比 +1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">27.3%</p>
-            <p class="sub">平均: 26.1%</p>
+            <div class="subline">
+              <p class="sub">平均: 26.1%</p>
+              <span class="trend up">▲ 先月比 +1.2pt</span>
+            </div>
           </article>
         </div>
       </section>
 
-          <section class="panel" id="monthly">
+          <section class="panel monthly-panel" id="monthly">
         <div class="panel-header">
           <div>
             <h2>マンスリー サマリー</h2>
             <p>月次の成果を俯瞰できます。</p>
           </div>
+          <button class="csv-button small outline">
+            <span class="csv-icon" aria-hidden="true">CSV</span>
+            マンスリー
+          </button>
         </div>
         <div class="grid">
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">38,420</p>
-            <p class="sub">平均: 9,605</p>
+            <div class="subline">
+              <p class="sub">平均: 9,605</p>
+              <span class="trend up">▲ 先月比 +3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$1,420,900</p>
-            <p class="sub">平均: $355,225</p>
+            <div class="subline">
+              <p class="sub">平均: $355,225</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$892,300</p>
-            <p class="sub">平均: $223,075</p>
+            <div class="subline">
+              <p class="sub">平均: $223,075</p>
+              <span class="trend down">▼ 先月比 -1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$1,258,600</p>
-            <p class="sub">平均: $314,650</p>
+            <div class="subline">
+              <p class="sub">平均: $314,650</p>
+              <span class="trend up">▲ 先月比 +4%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$377,400</p>
-            <p class="sub">平均: $94,350</p>
+            <div class="subline">
+              <p class="sub">平均: $94,350</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">26.6%</p>
-            <p class="sub">平均: 25.2%</p>
+            <div class="subline">
+              <p class="sub">平均: 25.2%</p>
+              <span class="trend up">▲ 先月比 +1.4pt</span>
+            </div>
           </article>
         </div>
+          </section>
+
+          <section class="panel" id="comparison">
+            <div class="panel-header">
+              <div>
+                <h2>デイリー・ウィークリー・マンスリー比較</h2>
+                <p>積み上げグラフと先月平均の推移を表示します。</p>
+              </div>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-chip monthly">マンスリー</span>
+              <span class="legend-chip last-month">先月合計 (ゴースト)</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-chart-grid">
+                <div class="bar-group" style="--total: 180px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 72%"></span>
+                    <span class="bar-segment current" style="height: 60%"></span>
+                  </div>
+                  <span class="bar-value">38,420 / 28,900</span>
+                  <span class="bar-label">合計数</span>
+                  <span class="bar-note">先月合計: 28,900</span>
+                </div>
+                <div class="bar-group" style="--total: 200px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 66%"></span>
+                    <span class="bar-segment current" style="height: 58%"></span>
+                  </div>
+                  <span class="bar-value">$1.42M / $1.32M</span>
+                  <span class="bar-label">販売額合計</span>
+                  <span class="bar-note">先月合計: $1.32M</span>
+                </div>
+                <div class="bar-group" style="--total: 160px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 64%"></span>
+                    <span class="bar-segment current" style="height: 55%"></span>
+                  </div>
+                  <span class="bar-value">$892k / $860k</span>
+                  <span class="bar-label">仕入れ額合計</span>
+                  <span class="bar-note">先月合計: $860k</span>
+                </div>
+                <div class="bar-group" style="--total: 190px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 70%"></span>
+                    <span class="bar-segment current" style="height: 62%"></span>
+                  </div>
+                  <span class="bar-value">$1.26M / $1.18M</span>
+                  <span class="bar-label">入金額合計</span>
+                  <span class="bar-note">先月合計: $1.18M</span>
+                </div>
+                <div class="bar-group" style="--total: 170px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 60%"></span>
+                    <span class="bar-segment current" style="height: 65%"></span>
+                  </div>
+                  <span class="bar-value">$377k / $348k</span>
+                  <span class="bar-label">粗利益額合計</span>
+                  <span class="bar-note">先月合計: $348k</span>
+                </div>
+                <div class="bar-group" style="--total: 150px;">
+                  <div class="bar-column">
+                    <span class="bar-segment ghost" style="height: 54%"></span>
+                    <span class="bar-segment current" style="height: 57%"></span>
+                  </div>
+                  <span class="bar-value">26.6% / 25.8%</span>
+                  <span class="bar-label">粗利益率</span>
+                  <span class="bar-note">先月合計: 25.8%</span>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>
