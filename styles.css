@@ -267,11 +267,6 @@ h1 {
   color: #1d4ed8;
 }
 
-.legend-chip.total-line {
-  background: rgba(245, 158, 11, 0.18);
-  color: #b45309;
-}
-
 .bar-chart {
   position: relative;
   padding-top: 12px;
@@ -286,33 +281,36 @@ h1 {
 
 .bar-group {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   justify-items: center;
   gap: 8px;
 }
 
 .bar-column {
-  width: 80px;
+  width: 64px;
   height: var(--total, 180px);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  align-items: end;
-  justify-items: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .bar-segment {
   width: 100%;
-  border-radius: 12px 12px 6px 6px;
-  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.3);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.35);
+}
+
+.bar-segment.ghost {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(147, 197, 253, 0.35);
+  border: 1px dashed rgba(59, 130, 246, 0.5);
 }
 
 .bar-segment.current {
   background: #2563eb;
-}
-
-.bar-segment.previous {
-  background: #93c5fd;
 }
 
 .bar-label {
@@ -321,30 +319,17 @@ h1 {
   text-align: center;
 }
 
+.bar-value {
+  font-size: 12px;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-align: center;
+}
+
 .bar-note {
   font-size: 12px;
   color: #64748b;
   text-align: center;
-}
-
-.average-line {
-  position: absolute;
-  inset: 0 0 28px 0;
-  width: 100%;
-  height: 220px;
-  pointer-events: none;
-}
-
-.average-line polyline {
-  fill: none;
-  stroke: #f59e0b;
-  stroke-width: 2;
-}
-
-.average-line circle {
-  fill: #f59e0b;
-  stroke: #ffffff;
-  stroke-width: 2;
 }
 
 @media (max-width: 720px) {
