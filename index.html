@@ -11,7 +11,8 @@
       <aside class="sidebar">
         <p class="sidebar-title">メニュー</p>
         <nav class="sidebar-nav">
-          <a class="menu-tab active" href="#seller-research">セラーリサーチ</a>
+          <a class="menu-tab active" href="#menu">メニュー</a>
+          <a class="menu-tab" href="#seller-research">セラーリサーチ</a>
           <a class="menu-tab" href="#asin-research">ASINリサーチ</a>
           <a class="menu-tab" href="#logout">ログアウト</a>
         </nav>
@@ -24,10 +25,20 @@
             <h1>メニュー画面</h1>
           </div>
           <div class="header-actions">
-            <button class="csv-button">
-              <span class="csv-icon" aria-hidden="true">CSV</span>
-              CSV出力
-            </button>
+            <div class="csv-group" aria-label="CSV出力">
+              <button class="csv-button">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                デイリー
+              </button>
+              <button class="csv-button outline">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                ウィークリー
+              </button>
+              <button class="csv-button outline">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                マンスリー
+              </button>
+            </div>
           </div>
         </header>
 
@@ -43,32 +54,50 @@
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">1,240</p>
-            <p class="sub">平均: 310</p>
+            <div class="subline">
+              <p class="sub">平均: 310</p>
+              <span class="trend up">▲ 先月比 +4%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$42,500</p>
-            <p class="sub">平均: $10,625</p>
+            <div class="subline">
+              <p class="sub">平均: $10,625</p>
+              <span class="trend up">▲ 先月比 +3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$26,180</p>
-            <p class="sub">平均: $6,545</p>
+            <div class="subline">
+              <p class="sub">平均: $6,545</p>
+              <span class="trend down">▼ 先月比 -2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$38,760</p>
-            <p class="sub">平均: $9,690</p>
+            <div class="subline">
+              <p class="sub">平均: $9,690</p>
+              <span class="trend up">▲ 先月比 +5%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$12,580</p>
-            <p class="sub">平均: $3,145</p>
+            <div class="subline">
+              <p class="sub">平均: $3,145</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">29.6%</p>
-            <p class="sub">平均: 27.8%</p>
+            <div class="subline">
+              <p class="sub">平均: 27.8%</p>
+              <span class="trend up">▲ 先月比 +1.8pt</span>
+            </div>
           </article>
         </div>
       </section>
@@ -84,32 +113,50 @@
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">8,960</p>
-            <p class="sub">平均: 1,280</p>
+            <div class="subline">
+              <p class="sub">平均: 1,280</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$318,420</p>
-            <p class="sub">平均: $45,488</p>
+            <div class="subline">
+              <p class="sub">平均: $45,488</p>
+              <span class="trend down">▼ 先月比 -1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$196,300</p>
-            <p class="sub">平均: $28,043</p>
+            <div class="subline">
+              <p class="sub">平均: $28,043</p>
+              <span class="trend down">▼ 先月比 -3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$284,750</p>
-            <p class="sub">平均: $40,679</p>
+            <div class="subline">
+              <p class="sub">平均: $40,679</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$86,800</p>
-            <p class="sub">平均: $12,400</p>
+            <div class="subline">
+              <p class="sub">平均: $12,400</p>
+              <span class="trend up">▲ 先月比 +1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">27.3%</p>
-            <p class="sub">平均: 26.1%</p>
+            <div class="subline">
+              <p class="sub">平均: 26.1%</p>
+              <span class="trend up">▲ 先月比 +1.2pt</span>
+            </div>
           </article>
         </div>
       </section>
@@ -125,34 +172,141 @@
           <article class="card">
             <h3>合計数</h3>
             <p class="metric">38,420</p>
-            <p class="sub">平均: 9,605</p>
+            <div class="subline">
+              <p class="sub">平均: 9,605</p>
+              <span class="trend up">▲ 先月比 +3%</span>
+            </div>
           </article>
           <article class="card">
             <h3>販売額合計 ($)</h3>
             <p class="metric">$1,420,900</p>
-            <p class="sub">平均: $355,225</p>
+            <div class="subline">
+              <p class="sub">平均: $355,225</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>仕入れ額合計</h3>
             <p class="metric">$892,300</p>
-            <p class="sub">平均: $223,075</p>
+            <div class="subline">
+              <p class="sub">平均: $223,075</p>
+              <span class="trend down">▼ 先月比 -1%</span>
+            </div>
           </article>
           <article class="card">
             <h3>入金額合計</h3>
             <p class="metric">$1,258,600</p>
-            <p class="sub">平均: $314,650</p>
+            <div class="subline">
+              <p class="sub">平均: $314,650</p>
+              <span class="trend up">▲ 先月比 +4%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益額合計</h3>
             <p class="metric">$377,400</p>
-            <p class="sub">平均: $94,350</p>
+            <div class="subline">
+              <p class="sub">平均: $94,350</p>
+              <span class="trend up">▲ 先月比 +2%</span>
+            </div>
           </article>
           <article class="card">
             <h3>粗利益率</h3>
             <p class="metric">26.6%</p>
-            <p class="sub">平均: 25.2%</p>
+            <div class="subline">
+              <p class="sub">平均: 25.2%</p>
+              <span class="trend up">▲ 先月比 +1.4pt</span>
+            </div>
           </article>
         </div>
+          </section>
+
+          <section class="panel" id="comparison">
+            <div class="panel-header">
+              <div>
+                <h2>デイリー・ウィークリー・マンスリー比較</h2>
+                <p>積み上げグラフと先月平均の推移を表示します。</p>
+              </div>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-chip daily">デイリー</span>
+              <span class="legend-chip weekly">ウィークリー</span>
+              <span class="legend-chip monthly">マンスリー</span>
+              <span class="legend-chip average">先月平均 (折れ線)</span>
+            </div>
+            <div class="stacked-chart">
+              <div class="chart-row">
+                <span class="chart-label">合計数</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 18%"></span>
+                    <span class="stack-segment weekly" style="width: 32%"></span>
+                    <span class="stack-segment monthly" style="width: 50%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 62%"></span>
+                </div>
+                <span class="chart-value">先月平均: 28,900</span>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">販売額合計</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 22%"></span>
+                    <span class="stack-segment weekly" style="width: 30%"></span>
+                    <span class="stack-segment monthly" style="width: 48%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 58%"></span>
+                </div>
+                <span class="chart-value">先月平均: $1.32M</span>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">仕入れ額合計</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 20%"></span>
+                    <span class="stack-segment weekly" style="width: 34%"></span>
+                    <span class="stack-segment monthly" style="width: 46%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 52%"></span>
+                </div>
+                <span class="chart-value">先月平均: $860k</span>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">入金額合計</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 19%"></span>
+                    <span class="stack-segment weekly" style="width: 33%"></span>
+                    <span class="stack-segment monthly" style="width: 48%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 60%"></span>
+                </div>
+                <span class="chart-value">先月平均: $1.18M</span>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">粗利益額合計</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 16%"></span>
+                    <span class="stack-segment weekly" style="width: 29%"></span>
+                    <span class="stack-segment monthly" style="width: 55%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 66%"></span>
+                </div>
+                <span class="chart-value">先月平均: $348k</span>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">粗利益率</span>
+                <div class="chart-track">
+                  <div class="chart-stack">
+                    <span class="stack-segment daily" style="width: 24%"></span>
+                    <span class="stack-segment weekly" style="width: 33%"></span>
+                    <span class="stack-segment monthly" style="width: 43%"></span>
+                  </div>
+                  <span class="chart-line" style="left: 54%"></span>
+                </div>
+                <span class="chart-value">先月平均: 25.8%</span>
+              </div>
+            </div>
           </section>
         </main>
       </div>
