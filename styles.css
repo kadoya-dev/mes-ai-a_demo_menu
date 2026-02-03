@@ -213,6 +213,7 @@ h1 {
   font-weight: 700;
   color: #94a3b8;
   min-height: 0;
+  width: 80px;
 }
 
 .sub {
@@ -225,6 +226,12 @@ h1 {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.card.profit .subline {
+  flex-wrap: nowrap;
+  gap: 6px;
+  font-size: 12px;
 }
 
 .trend {
