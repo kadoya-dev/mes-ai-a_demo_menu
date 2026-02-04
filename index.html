@@ -14,6 +14,7 @@
           <a class="menu-tab active" href="#menu">TOP</a>
           <a class="menu-tab" href="#seller-research">セラーリサーチ</a>
           <a class="menu-tab" href="#asin-research">ASINリサーチ</a>
+          <a class="menu-tab" href="#settings">設定</a>
           <a class="menu-tab" href="#logout">ログアウト</a>
         </nav>
       </aside>
@@ -62,7 +63,6 @@
               <span class="trend up">▲ 先月比 +5%</span>
             </div>
           </article>
-          <div class="calc-sep">－</div>
           <article class="card expense">
             <h3>仕入れ額合計</h3>
             <p class="metric">$26,180</p>
@@ -71,7 +71,6 @@
               <span class="trend down">▼ 先月比 -2%</span>
             </div>
           </article>
-          <div class="calc-sep">＝</div>
           <article class="card profit">
             <h3>粗利益額合計</h3>
             <p class="metric">$12,580</p>
@@ -126,7 +125,6 @@
               <span class="trend up">▲ 先月比 +2%</span>
             </div>
           </article>
-          <div class="calc-sep">－</div>
           <article class="card expense">
             <h3>仕入れ額合計</h3>
             <p class="metric">$196,300</p>
@@ -135,7 +133,6 @@
               <span class="trend down">▼ 先月比 -3%</span>
             </div>
           </article>
-          <div class="calc-sep">＝</div>
           <article class="card profit">
             <h3>粗利益額合計</h3>
             <p class="metric">$86,800</p>
@@ -190,7 +187,6 @@
               <span class="trend up">▲ 先月比 +4%</span>
             </div>
           </article>
-          <div class="calc-sep">－</div>
           <article class="card expense">
             <h3>仕入れ額合計</h3>
             <p class="metric">$892,300</p>
@@ -199,7 +195,6 @@
               <span class="trend down">▼ 先月比 -1%</span>
             </div>
           </article>
-          <div class="calc-sep">＝</div>
           <article class="card profit">
             <h3>粗利益額合計</h3>
             <p class="metric">$377,400</p>
@@ -219,124 +214,6 @@
         </div>
           </section>
 
-          <section class="panel" id="comparison">
-            <div class="panel-header">
-              <div>
-                <h2>マンスリー（前月比）</h2>
-                <p>マンスリーと先月合計の比較を表示します。</p>
-              </div>
-            </div>
-            <div class="chart-legend">
-              <span class="legend-chip monthly">マンスリー</span>
-              <span class="legend-chip last-month">先月合計 (ゴースト)</span>
-            </div>
-            <div class="bar-chart">
-              <div class="bar-chart-grid">
-                <div class="bar-group" style="--total: 180px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>38,420</span>
-                      <span>28,900</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 64%"></span>
-                      <span class="bar-segment current above" style="height: 82%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: 38,420</span>
-                    <span>先月合計: 28,900</span>
-                  </div>
-                  <span class="bar-label">合計数</span>
-                </div>
-                <div class="bar-group" style="--total: 200px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>$1.42M</span>
-                      <span>$1.32M</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 66%"></span>
-                      <span class="bar-segment current above" style="height: 74%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: $1.42M</span>
-                    <span>先月合計: $1.32M</span>
-                  </div>
-                  <span class="bar-label">販売額合計</span>
-                </div>
-                <div class="bar-group" style="--total: 160px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>$892k</span>
-                      <span>$860k</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 60%"></span>
-                      <span class="bar-segment current above" style="height: 65%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: $892k</span>
-                    <span>先月合計: $860k</span>
-                  </div>
-                  <span class="bar-label">仕入れ額合計</span>
-                </div>
-                <div class="bar-group" style="--total: 190px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>$1.26M</span>
-                      <span>$1.18M</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 62%"></span>
-                      <span class="bar-segment current above" style="height: 70%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: $1.26M</span>
-                    <span>先月合計: $1.18M</span>
-                  </div>
-                  <span class="bar-label">入金額合計</span>
-                </div>
-                <div class="bar-group" style="--total: 170px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>$377k</span>
-                      <span>$348k</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 58%"></span>
-                      <span class="bar-segment current above" style="height: 68%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: $377k</span>
-                    <span>先月合計: $348k</span>
-                  </div>
-                  <span class="bar-label">粗利益額合計</span>
-                </div>
-                <div class="bar-group" style="--total: 150px;">
-                  <div class="bar-stack">
-                    <div class="bar-axis">
-                      <span>26.6%</span>
-                      <span>25.8%</span>
-                    </div>
-                    <div class="bar-column">
-                      <span class="bar-segment ghost" style="height: 54%"></span>
-                      <span class="bar-segment current above" style="height: 57%"></span>
-                    </div>
-                  </div>
-                  <div class="bar-value">
-                    <span>今月合計: 26.6%</span>
-                    <span>先月合計: 25.8%</span>
-                  </div>
-                  <span class="bar-label">粗利益率</span>
-                </div>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
     </div>
