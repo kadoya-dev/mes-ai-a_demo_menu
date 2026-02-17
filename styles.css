@@ -165,6 +165,155 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+
+
+.global-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.period-range {
+  display: grid;
+  gap: 8px;
+}
+
+.period-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.period-inputs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.period-symbol {
+  font-weight: 700;
+  color: #334155;
+}
+
+.period-inputs input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  min-width: 180px;
+  background: #fff;
+}
+
+.achievement-towers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.tower-card {
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 14px;
+}
+
+.tower-card h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.coin-tower {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #93c5fd;
+}
+
+.coin {
+  width: 66px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fde68a, #f59e0b);
+  border: 1px solid #d97706;
+  box-shadow: inset 0 -2px 0 rgba(120, 53, 15, 0.25);
+}
+
+.coin.c2 { width: 58px; }
+.coin.c3 { width: 50px; }
+.coin.c4 { width: 42px; }
+.coin.c5 { width: 34px; }
+
+.tower-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.summary-table {
+  border: 3px solid #1d4ed8;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+}
+
+.summary-cell {
+  padding: 10px 8px;
+  border-right: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.summary-cell:nth-child(6n) {
+  border-right: none;
+}
+
+.summary-cell.target {
+  background: #e9f2e5;
+}
+
+.summary-cell.label {
+  font-size: 16px;
+  background: #f8fafc;
+}
+
+.summary-cell.value {
+  font-size: 20px;
+}
+
+.summary-cell.note,
+.summary-cell.delta {
+  font-size: 18px;
+}
+
+.summary-cell.empty {
+  font-size: 0;
+}
+
+@media (max-width: 1080px) {
+  .summary-table {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  .summary-cell:nth-child(6n) {
+    border-right: 1px solid #d1d5db;
+  }
+
+  .summary-cell:nth-child(3n) {
+    border-right: none;
+  }
+}
+
 .grid {
   display: grid;
   gap: 16px;
@@ -383,6 +532,18 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  .achievement-towers {
+    grid-template-columns: 1fr;
+  }
+
+  .global-controls {
+    align-items: flex-start;
+  }
+
+  .period-inputs input {
+    min-width: 150px;
+  }
+
   body {
     padding: 20px;
   }
