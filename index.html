@@ -28,13 +28,42 @@
         </header>
 
         <main>
+          <section class="panel global-controls-panel">
+            <div class="global-controls">
+              <label class="date-field">
+                <span>日付FROM</span>
+                <input type="date" value="2026-02-01" />
+              </label>
+              <label class="date-field">
+                <span>日付TO</span>
+                <input type="date" value="2026-02-17" />
+              </label>
+              <button class="csv-button">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                CSV出力
+              </button>
+            </div>
+          </section>
+
           <section class="panel daily-panel" id="daily">
             <div class="panel-header">
               <h2>デイリー</h2>
-              <button class="csv-button small outline">
-                <span class="csv-icon" aria-hidden="true">CSV</span>
-                デイリー
-              </button>
+            </div>
+            <div class="achievement-towers">
+              <article class="tower-card sales">
+                <h3>T売上達成率</h3>
+                <div class="coin-stack" aria-hidden="true">
+                  <span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span>
+                </div>
+                <p class="tower-value">82%</p>
+              </article>
+              <article class="tower-card profit">
+                <h3>T利益達成率</h3>
+                <div class="coin-stack" aria-hidden="true">
+                  <span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span>
+                </div>
+                <p class="tower-value">68%</p>
+              </article>
             </div>
             <div class="summary-table">
               <div class="summary-cell label">入金額</div>
@@ -63,10 +92,6 @@
           <section class="panel weekly-panel" id="weekly">
             <div class="panel-header">
               <h2>ウィークリー</h2>
-              <button class="csv-button small outline">
-                <span class="csv-icon" aria-hidden="true">CSV</span>
-                ウィークリー
-              </button>
             </div>
             <div class="summary-table">
               <div class="summary-cell label">入金額</div>
@@ -95,10 +120,6 @@
           <section class="panel monthly-panel" id="monthly">
             <div class="panel-header">
               <h2>マンスリー</h2>
-              <button class="csv-button small outline">
-                <span class="csv-icon" aria-hidden="true">CSV</span>
-                マンスリー
-              </button>
             </div>
             <div class="summary-table">
               <div class="summary-cell label">入金額</div>
