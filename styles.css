@@ -165,6 +165,65 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+
+.summary-table {
+  border: 3px solid #1d4ed8;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+}
+
+.summary-cell {
+  padding: 10px 8px;
+  border-right: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.summary-cell:nth-child(6n) {
+  border-right: none;
+}
+
+.summary-cell.target {
+  background: #e9f2e5;
+}
+
+.summary-cell.label {
+  font-size: 16px;
+  background: #f8fafc;
+}
+
+.summary-cell.value {
+  font-size: 20px;
+}
+
+.summary-cell.note,
+.summary-cell.delta {
+  font-size: 18px;
+}
+
+.summary-cell.empty {
+  font-size: 0;
+}
+
+@media (max-width: 1080px) {
+  .summary-table {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  .summary-cell:nth-child(6n) {
+    border-right: 1px solid #d1d5db;
+  }
+
+  .summary-cell:nth-child(3n) {
+    border-right: none;
+  }
+}
+
 .grid {
   display: grid;
   gap: 16px;

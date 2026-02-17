@@ -29,191 +29,107 @@
 
         <main>
           <section class="panel daily-panel" id="daily">
-        <div class="panel-header">
-          <div>
-            <h2>デイリー サマリー</h2>
-          </div>
-          <button class="csv-button small outline">
-            <span class="csv-icon" aria-hidden="true">CSV</span>
-            デイリー
-          </button>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <h3>合計数</h3>
-            <p class="metric">1,240</p>
-            <div class="subline">
-              <p class="sub">平均: 310</p>
-              <span class="trend up">▲ 先月比 +4%</span>
+            <div class="panel-header">
+              <h2>デイリー</h2>
+              <button class="csv-button small outline">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                デイリー
+              </button>
             </div>
-          </article>
-          <article class="card">
-            <h3>販売額合計 ($)</h3>
-            <p class="metric">$42,500</p>
-            <div class="subline">
-              <p class="sub">平均: $10,625</p>
-              <span class="trend up">▲ 先月比 +3%</span>
-            </div>
-          </article>
-          <article class="card income">
-            <h3>入金額合計</h3>
-            <p class="metric">$38,760</p>
-            <div class="subline">
-              <p class="sub">平均: $9,690</p>
-              <span class="trend up">▲ 先月比 +5%</span>
-            </div>
-          </article>
-          <article class="card expense">
-            <h3>仕入れ額合計</h3>
-            <p class="metric">$26,180</p>
-            <div class="subline">
-              <p class="sub">平均: $6,545</p>
-              <span class="trend down">▼ 先月比 -2%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益額合計</h3>
-            <p class="metric">$12,580</p>
-            <div class="subline">
-              <p class="sub">平均: $3,145</p>
-              <span class="trend up">▲ 先月比 +2%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益率</h3>
-            <p class="metric">29.6%</p>
-            <div class="subline">
-              <p class="sub">平均: 27.8%</p>
-              <span class="trend up">▲ 先月比 +1.8pt</span>
-            </div>
-          </article>
-        </div>
-      </section>
+            <div class="summary-table">
+              <div class="summary-cell label">入金額</div>
+              <div class="summary-cell label">仕入れ額</div>
+              <div class="summary-cell label">粗利益額</div>
+              <div class="summary-cell label">粗利益率</div>
+              <div class="summary-cell label target">T売上達成率</div>
+              <div class="summary-cell label target">T利益達成率</div>
 
-          <section class="panel weekly-panel" id="weekly">
-        <div class="panel-header">
-          <div>
-            <h2>ウィークリー サマリー</h2>
-          </div>
-          <button class="csv-button small outline">
-            <span class="csv-icon" aria-hidden="true">CSV</span>
-            ウィークリー
-          </button>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <h3>合計数</h3>
-            <p class="metric">8,960</p>
-            <div class="subline">
-              <p class="sub">平均: 1,280</p>
-              <span class="trend up">▲ 先月比 +2%</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>販売額合計 ($)</h3>
-            <p class="metric">$318,420</p>
-            <div class="subline">
-              <p class="sub">平均: $45,488</p>
-              <span class="trend down">▼ 先月比 -1%</span>
-            </div>
-          </article>
-          <article class="card income">
-            <h3>入金額合計</h3>
-            <p class="metric">$284,750</p>
-            <div class="subline">
-              <p class="sub">平均: $40,679</p>
-              <span class="trend up">▲ 先月比 +2%</span>
-            </div>
-          </article>
-          <article class="card expense">
-            <h3>仕入れ額合計</h3>
-            <p class="metric">$196,300</p>
-            <div class="subline">
-              <p class="sub">平均: $28,043</p>
-              <span class="trend down">▼ 先月比 -3%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益額合計</h3>
-            <p class="metric">$86,800</p>
-            <div class="subline">
-              <p class="sub">平均: $12,400</p>
-              <span class="trend up">▲ 先月比 +1%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益率</h3>
-            <p class="metric">27.3%</p>
-            <div class="subline">
-              <p class="sub">平均: 26.1%</p>
-              <span class="trend up">▲ 先月比 +1.2pt</span>
-            </div>
-          </article>
-        </div>
-      </section>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
 
-          <section class="panel monthly-panel" id="monthly">
-        <div class="panel-header">
-          <div>
-            <h2>マンスリー サマリー</h2>
-          </div>
-          <button class="csv-button small outline">
-            <span class="csv-icon" aria-hidden="true">CSV</span>
-            マンスリー
-          </button>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <h3>合計数</h3>
-            <p class="metric">38,420</p>
-            <div class="subline">
-              <p class="sub">平均: 9,605</p>
-              <span class="trend up">▲ 先月比 +3%</span>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell delta target">💰+1,000円</div>
+              <div class="summary-cell delta target">💸-500円</div>
             </div>
-          </article>
-          <article class="card">
-            <h3>販売額合計 ($)</h3>
-            <p class="metric">$1,420,900</p>
-            <div class="subline">
-              <p class="sub">平均: $355,225</p>
-              <span class="trend up">▲ 先月比 +2%</span>
-            </div>
-          </article>
-          <article class="card income">
-            <h3>入金額合計</h3>
-            <p class="metric">$1,258,600</p>
-            <div class="subline">
-              <p class="sub">平均: $314,650</p>
-              <span class="trend up">▲ 先月比 +4%</span>
-            </div>
-          </article>
-          <article class="card expense">
-            <h3>仕入れ額合計</h3>
-            <p class="metric">$892,300</p>
-            <div class="subline">
-              <p class="sub">平均: $223,075</p>
-              <span class="trend down">▼ 先月比 -1%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益額合計</h3>
-            <p class="metric">$377,400</p>
-            <div class="subline">
-              <p class="sub">平均: $94,350</p>
-              <span class="trend up">▲ 先月比 +2%</span>
-            </div>
-          </article>
-          <article class="card profit">
-            <h3>粗利益率</h3>
-            <p class="metric">26.6%</p>
-            <div class="subline">
-              <p class="sub">平均: 25.2%</p>
-              <span class="trend up">▲ 先月比 +1.4pt</span>
-            </div>
-          </article>
-        </div>
           </section>
 
+          <section class="panel weekly-panel" id="weekly">
+            <div class="panel-header">
+              <h2>ウィークリー</h2>
+              <button class="csv-button small outline">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                ウィークリー
+              </button>
+            </div>
+            <div class="summary-table">
+              <div class="summary-cell label">入金額</div>
+              <div class="summary-cell label">仕入れ額</div>
+              <div class="summary-cell label">粗利益額</div>
+              <div class="summary-cell label">粗利益率</div>
+              <div class="summary-cell label target">T売上達成率</div>
+              <div class="summary-cell label target">T利益達成率</div>
+
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
+
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell delta target">💸-500円</div>
+              <div class="summary-cell delta target">💸-2000円</div>
+            </div>
+          </section>
+
+          <section class="panel monthly-panel" id="monthly">
+            <div class="panel-header">
+              <h2>マンスリー</h2>
+              <button class="csv-button small outline">
+                <span class="csv-icon" aria-hidden="true">CSV</span>
+                マンスリー
+              </button>
+            </div>
+            <div class="summary-table">
+              <div class="summary-cell label">入金額</div>
+              <div class="summary-cell label">仕入れ額</div>
+              <div class="summary-cell label">粗利益額</div>
+              <div class="summary-cell label">粗利益率</div>
+              <div class="summary-cell label target">T売上達成率</div>
+              <div class="summary-cell label target">T利益達成率</div>
+
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
+              <div class="summary-cell value target">〇〇〇</div>
+
+              <div class="summary-cell note">前月比〇％</div>
+              <div class="summary-cell note">前月比〇％</div>
+              <div class="summary-cell note">前月比〇％</div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty target"></div>
+              <div class="summary-cell empty target"></div>
+
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell empty"></div>
+              <div class="summary-cell delta target">💰+1,000円</div>
+              <div class="summary-cell delta target">💸-500円</div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
