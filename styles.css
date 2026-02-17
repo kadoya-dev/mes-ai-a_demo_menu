@@ -183,7 +183,6 @@ h1 {
 .period-title {
   font-size: 13px;
   font-weight: 700;
-  color: #475569;
 }
 
 .period-inputs {
@@ -209,51 +208,57 @@ h1 {
 
 .achievement-towers {
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: 16px;
   margin-bottom: 16px;
 }
 
-.tower-card {
-  border: 1px solid #dbeafe;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
-  padding: 14px;
+.coin-tower-widget {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.08), -10px -10px 30px rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
-.tower-card h3 {
-  font-size: 14px;
+.coin-tower-widget h3 {
   margin-bottom: 10px;
-  color: #1e3a8a;
 }
 
-.coin-tower {
-  display: grid;
-  justify-items: center;
-  gap: 3px;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #93c5fd;
+.target-amount {
+  margin-bottom: 14px;
 }
 
-.coin {
-  width: 66px;
-  height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #fde68a, #f59e0b);
-  border: 1px solid #d97706;
-  box-shadow: inset 0 -2px 0 rgba(120, 53, 15, 0.25);
+.tower-container {
+  width: 80px;
+  height: 160px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 0 auto 12px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.coin.c2 { width: 58px; }
-.coin.c3 { width: 50px; }
-.coin.c4 { width: 42px; }
-.coin.c5 { width: 34px; }
+.coin-stack {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffd700;
+  box-shadow: 0 -2px 5px rgba(255, 215, 0, 0.5);
+  border-top: 1px solid #e0b000;
+}
 
-.tower-value {
-  font-size: 24px;
-  font-weight: 800;
-  color: #1d4ed8;
+.current-amount {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.percentage {
+  display: block;
 }
 
 .summary-table {
