@@ -30,14 +30,14 @@
         <main>
           <section class="panel global-controls-panel">
             <div class="global-controls">
-              <label class="date-field">
-                <span>日付FROM</span>
-                <input type="date" value="2026-02-01" />
-              </label>
-              <label class="date-field">
-                <span>日付TO</span>
-                <input type="date" value="2026-02-17" />
-              </label>
+              <div class="period-range" role="group" aria-label="出力対象期間">
+                <p class="period-title">出力対象期間</p>
+                <div class="period-inputs">
+                  <input type="date" value="2026-02-01" aria-label="日付FROM" />
+                  <span class="period-symbol">～</span>
+                  <input type="date" value="2026-02-17" aria-label="日付TO" />
+                </div>
+              </div>
               <button class="csv-button">
                 <span class="csv-icon" aria-hidden="true">CSV</span>
                 CSV出力
@@ -46,24 +46,24 @@
           </section>
 
           <section class="panel daily-panel" id="daily">
-            <div class="panel-header">
-              <h2>デイリー</h2>
-            </div>
             <div class="achievement-towers">
               <article class="tower-card sales">
                 <h3>T売上達成率</h3>
-                <div class="coin-stack" aria-hidden="true">
-                  <span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span>
+                <div class="coin-tower" aria-hidden="true">
+                  <span class="coin c1"></span><span class="coin c2"></span><span class="coin c3"></span><span class="coin c4"></span><span class="coin c5"></span>
                 </div>
                 <p class="tower-value">82%</p>
               </article>
               <article class="tower-card profit">
                 <h3>T利益達成率</h3>
-                <div class="coin-stack" aria-hidden="true">
-                  <span>🪙</span><span>🪙</span><span>🪙</span><span>🪙</span>
+                <div class="coin-tower" aria-hidden="true">
+                  <span class="coin c1"></span><span class="coin c2"></span><span class="coin c3"></span><span class="coin c4"></span>
                 </div>
                 <p class="tower-value">68%</p>
               </article>
+            </div>
+            <div class="panel-header">
+              <h2>デイリー</h2>
             </div>
             <div class="summary-table">
               <div class="summary-cell label">入金額</div>
