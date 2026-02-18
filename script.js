@@ -13,30 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentElem = document.getElementById(`current-${item.id}`);
     const rateElem = document.getElementById(`rate-${item.id}`);
     const overElem = document.getElementById(`over-${item.id}`);
-    const overflowElem = document.getElementById(`overflow-${item.id}`);
 
-    if (!container || !targetElem || !currentElem || !rateElem || !overElem || !overflowElem) {
+    if (!container || !targetElem || !currentElem || !rateElem || !overElem) {
       return;
     }
-
-    const createSpillCoins = (count) => {
-      overflowElem.innerHTML = "";
-
-      for (let i = 0; i < count; i += 1) {
-        const spill = document.createElement("span");
-        spill.classList.add("spill-coin");
-
-        const x = `${Math.round(Math.random() * 120 - 60)}px`;
-        const y = `${Math.round(Math.random() * 20)}px`;
-        const rot = `${Math.round(Math.random() * 50 - 25)}deg`;
-        spill.style.setProperty("--sx", x);
-        spill.style.setProperty("--sy", y);
-        spill.style.setProperty("--sr", rot);
-        spill.style.animationDelay = `${0.8 + i * 0.05}s`;
-
-        overflowElem.appendChild(spill);
-      }
-    };
 
     const rate = Math.round((item.current / item.target) * 100);
     const overRate = Math.max(0, rate - 100);
@@ -50,9 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       overElem.hidden = false;
       overElem.textContent = `達成 +${overRate}%`;
       container.parentElement?.classList.add("over-achieved");
-
-      const spillCount = Math.min(14, Math.max(4, Math.round(overRate / 3)));
-      createSpillCoins(spillCount);
     }
 
     for (let i = 0; i < item.maxCoins; i += 1) {
