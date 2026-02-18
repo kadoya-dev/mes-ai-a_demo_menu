@@ -119,6 +119,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.setTimeout(() => layer.remove(), 5200);
   };
 
+
+  const styleMonthlyComparisonChips = () => {
+    const monthlyComparisons = Array.from(document.querySelectorAll('.monthly-panel .metric-item small'));
+
+    monthlyComparisons.forEach((chip) => {
+      const raw = (chip.textContent ?? '').trim();
+      const isDown = raw.includes('-') || raw.includes('−');
+
+      chip.classList.add('mom-chip');
+      chip.classList.toggle('mom-up', !isDown);
+      chip.classList.toggle('mom-down', isDown);
+    });
+  };
+
   const addCelebrateButtons = () => {
     const totalAchievedCount = towerGroups.reduce(
       (sum, group) => sum + group.items.filter((item) => getRate(item) >= 100).length,
@@ -157,4 +171,5 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   addCelebrateButtons();
+  styleMonthlyComparisonChips();
 });
