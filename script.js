@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const salesTowerConfig = [
-    { id: "daily", target: 500000, current: 410000, maxCoins: 20 },
-    { id: "weekly", target: 3200000, current: 2884000, maxCoins: 20 },
-    { id: "monthly", target: 12300000, current: 12460000, maxCoins: 20 },
+    { id: "daily", target: 500000, current: 410000, maxCoins: 28 },
+    { id: "weekly", target: 3200000, current: 2884000, maxCoins: 28 },
+    { id: "monthly", target: 12300000, current: 12460000, maxCoins: 28 },
   ];
 
   const formatYen = (value) => `¥${value.toLocaleString("ja-JP")}`;
@@ -12,17 +12,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const targetElem = document.getElementById(`target-${item.id}`);
     const currentElem = document.getElementById(`current-${item.id}`);
     const rateElem = document.getElementById(`rate-${item.id}`);
+    const overElem = document.getElementById(`over-${item.id}`);
 
-    if (!container || !targetElem || !currentElem || !rateElem) {
+    if (!container || !targetElem || !currentElem || !rateElem || !overElem) {
       return;
     }
 
     const rate = Math.round((item.current / item.target) * 100);
-    const activeCount = Math.min(item.maxCoins, Math.round((rate / 100) * item.maxCoins));
+    const overRate = Math.max(0, rate - 100);
+    const activeCount = Math.min(item.maxCoins, Math.round((Math.min(rate, 100) / 100) * item.maxCoins));
 
     targetElem.textContent = formatYen(item.target);
     currentElem.textContent = formatYen(item.current);
     rateElem.textContent = `${rate}%`;
+
+    if (overRate > 0) {
+      overElem.hidden = false;
+      overElem.textContent = `達成 +${overRate}%`;
+      container.parentElement?.classList.add("over-achieved");
+    }
 
     for (let i = 0; i < item.maxCoins; i += 1) {
       const slot = document.createElement("div");

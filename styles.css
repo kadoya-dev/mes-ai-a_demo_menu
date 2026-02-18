@@ -202,7 +202,7 @@ h1 {
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 14px;
-  min-width: 180px;
+  min-width: 166px;
   background: #fff;
 }
 
@@ -226,11 +226,11 @@ h1 {
 }
 
 .target-amount {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .tower-container {
-  width: 106px;
+  width: 88px;
   height: 160px;
   background-color: #e0e0e0;
   border-radius: 10px;
@@ -597,7 +597,7 @@ h1 {
   position: relative;
   width: 100%;
   max-width: 540px;
-  min-height: 560px;
+  min-height: 430px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -612,13 +612,13 @@ h1 {
 }
 
 .sales-stage .weekly-pos {
-  bottom: 38px;
+  bottom: 24px;
   left: 22px;
   z-index: 2;
 }
 
 .sales-stage .monthly-pos {
-  bottom: 38px;
+  bottom: 24px;
   right: 22px;
   z-index: 2;
 }
@@ -631,15 +631,15 @@ h1 {
 }
 
 .sales-label-box {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   text-align: center;
   background: rgba(255, 255, 255, 0.96);
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   white-space: nowrap;
-  min-width: 180px;
+  min-width: 166px;
 }
 
 .sales-tower-title {
@@ -650,8 +650,8 @@ h1 {
 }
 
 .sales-label-box p {
-  font-size: 12px;
-  margin-bottom: 3px;
+  font-size: 11px;
+  margin-bottom: 2px;
 }
 
 .sales-label-box p:last-child {
@@ -663,8 +663,30 @@ h1 {
   font-weight: 700;
 }
 
+.sales-over-badge {
+  display: inline-flex;
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+}
+
+.sales-tower-group.over-achieved .sales-label-box {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sales-tower-group.over-achieved .active-coin {
+  box-shadow: 0 3px 0 #d4ac0d, 0 0 12px rgba(245, 158, 11, 0.45);
+}
+
+
 .sales-tower-container {
-  width: 126px;
+  width: 108px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -673,8 +695,8 @@ h1 {
 
 .coin-slot {
   position: relative;
-  width: 112px;
-  height: 26px;
+  width: 92px;
+  height: 14px;
   margin-bottom: -9px;
   display: flex;
   justify-content: center;
@@ -682,8 +704,8 @@ h1 {
 
 .coin-base {
   position: absolute;
-  width: 106px;
-  height: 24px;
+  width: 88px;
+  height: 14px;
   border-radius: 50%;
   opacity: 0;
   transform: translateY(-800px);
@@ -692,7 +714,7 @@ h1 {
 .active-coin {
   background-color: #f1c40f;
   border: 1px solid #d4ac0d;
-  box-shadow: 0 5px 0 #d4ac0d;
+  box-shadow: 0 3px 0 #d4ac0d;
   z-index: 10;
 }
 
@@ -774,7 +796,7 @@ h1 {
 
 @media (max-width: 760px) {
   .sales-stage {
-    min-height: 980px;
+    min-height: 760px;
     align-items: flex-start;
     justify-content: center;
   }
