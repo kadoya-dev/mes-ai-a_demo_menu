@@ -47,14 +47,37 @@
 
           <section class="panel daily-panel" id="daily">
             <div class="achievement-towers">
-              <article class="coin-tower-widget">
+              <article class="coin-tower-widget sales-achievement-widget" data-widget="sales-achievement">
                 <h3>T売上達成率</h3>
-                <p class="target-amount">目標: ¥500,000</p>
-                <div class="tower-container" aria-hidden="true">
-                  <div class="coin-stack" style="height: 82%"></div>
+                <div class="sales-stage" aria-label="T売上達成率 タワー比較">
+                  <div class="sales-tower-group weekly-pos">
+                    <div class="sales-label-box">
+                      <p class="sales-tower-title">ウィークリー</p>
+                      <p class="sales-target">目標金額: <span id="target-weekly">-</span></p>
+                      <p class="sales-current">現状の金額: <span id="current-weekly">-</span></p>
+                      <p class="sales-rate">達成率: <span id="rate-weekly">0%</span></p>
+                    </div>
+                    <div class="sales-tower-container" id="tower-weekly" aria-hidden="true"></div>
+                  </div>
+                  <div class="sales-tower-group monthly-pos">
+                    <div class="sales-label-box">
+                      <p class="sales-tower-title">マンスリー</p>
+                      <p class="sales-target">目標金額: <span id="target-monthly">-</span></p>
+                      <p class="sales-current">現状の金額: <span id="current-monthly">-</span></p>
+                      <p class="sales-rate">達成率: <span id="rate-monthly">0%</span></p>
+                    </div>
+                    <div class="sales-tower-container" id="tower-monthly" aria-hidden="true"></div>
+                  </div>
+                  <div class="sales-tower-group daily-pos">
+                    <div class="sales-label-box">
+                      <p class="sales-tower-title">デイリー</p>
+                      <p class="sales-target">目標金額: <span id="target-daily">-</span></p>
+                      <p class="sales-current">現状の金額: <span id="current-daily">-</span></p>
+                      <p class="sales-rate">達成率: <span id="rate-daily">0%</span></p>
+                    </div>
+                    <div class="sales-tower-container" id="tower-daily" aria-hidden="true"></div>
+                  </div>
                 </div>
-                <span class="current-amount">¥410,000</span>
-                <span class="percentage">82% 達成</span>
               </article>
               <article class="coin-tower-widget">
                 <h3>T利益達成率</h3>
@@ -109,5 +132,6 @@
         </main>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
