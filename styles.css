@@ -312,6 +312,101 @@ h1 {
   font-size: 14px;
 }
 
+.metric-item.target span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+
+.monthly-panel .metric-item small.mom-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.monthly-panel .metric-item small.mom-chip::before {
+  content: "▲";
+  margin-right: 6px;
+  font-size: 0.88em;
+}
+
+.monthly-panel .metric-item small.mom-chip.mom-up {
+  background: #dff7ea;
+  color: #138f5b;
+}
+
+.monthly-panel .metric-item small.mom-chip.mom-down {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.monthly-panel .metric-item small.mom-chip.mom-down::before {
+  content: "▼";
+}
+
+.celebrate-button {
+  margin: 10px auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.celebrate-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(239, 68, 68, 0.3);
+}
+
+.celebrate-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -12vh;
+  width: 10px;
+  height: 16px;
+  opacity: 0.95;
+  transform: translate3d(var(--x-start), -12vh, 0) rotate(0deg);
+  animation: confetti-fall var(--fall-duration) linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translate3d(var(--x-start), -12vh, 0) rotate(0deg);
+    opacity: 0.98;
+  }
+  100% {
+    transform: translate3d(calc(var(--x-start) + var(--x-drift)), 110vh, 0) rotate(var(--spin));
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 1080px) {
   .summary-metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
