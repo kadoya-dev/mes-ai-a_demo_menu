@@ -596,7 +596,7 @@ h1 {
 .sales-stage {
   position: relative;
   width: 100%;
-  max-width: 540px;
+  max-width: 500px;
   min-height: 430px;
   margin: 0 auto;
   display: flex;
@@ -613,13 +613,13 @@ h1 {
 
 .sales-stage .weekly-pos {
   bottom: 24px;
-  left: 22px;
+  left: 56px;
   z-index: 2;
 }
 
 .sales-stage .monthly-pos {
   bottom: 24px;
-  right: 22px;
+  right: 56px;
   z-index: 2;
 }
 
@@ -691,6 +691,53 @@ h1 {
   flex-direction: column-reverse;
   align-items: center;
   padding-bottom: 2px;
+}
+
+.overflow-coins {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  width: 150px;
+  height: 42px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.spill-coin {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 22px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f1c40f;
+  border: 1px solid #d4ac0d;
+  box-shadow: 0 2px 0 #d4ac0d;
+  opacity: 0;
+  transform: translate(-50%, 0) rotate(0deg);
+  animation: spillCoin 0.5s ease-out forwards;
+}
+
+.spill-coin::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  right: 3px;
+  bottom: 2px;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 134, 11, 0.35);
+}
+
+@keyframes spillCoin {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--sx)), var(--sy)) rotate(var(--sr));
+  }
 }
 
 .coin-slot {
@@ -790,7 +837,15 @@ h1 {
   }
 
   .sales-stage {
-    max-width: 640px;
+    max-width: 580px;
+  }
+
+  .sales-stage .weekly-pos {
+    left: 80px;
+  }
+
+  .sales-stage .monthly-pos {
+    right: 80px;
   }
 }
 
