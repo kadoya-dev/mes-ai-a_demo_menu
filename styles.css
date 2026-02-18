@@ -590,7 +590,9 @@ h1 {
 }
 
 .sales-achievement-widget h3 {
-  margin-bottom: 12px;
+  position: relative;
+  z-index: 120;
+  margin-bottom: 10px;
 }
 
 .sales-stage {
@@ -599,6 +601,7 @@ h1 {
   max-width: 500px;
   min-height: 330px;
   margin: 0 auto;
+  margin-top: 18px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -713,36 +716,6 @@ h1 {
   padding-bottom: 2px;
 }
 
-
-.sales-tower-group.over-achieved .sales-tower-container::before,
-.sales-tower-group.over-achieved .sales-tower-container::after {
-  content: "✨";
-  position: absolute;
-  font-size: 16px;
-  animation: sparkle 1.3s ease-in-out infinite alternate;
-}
-
-.sales-tower-group.over-achieved .sales-tower-container::before {
-  top: -8px;
-  left: -16px;
-}
-
-.sales-tower-group.over-achieved .sales-tower-container::after {
-  top: 18px;
-  right: -16px;
-  animation-delay: 0.4s;
-}
-
-@keyframes sparkle {
-  0% {
-    transform: scale(0.9) rotate(-8deg);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1.15) rotate(8deg);
-    opacity: 1;
-  }
-}
 
 .coin-slot {
   position: relative;
