@@ -84,7 +84,7 @@ body {
   letter-spacing: 0.12em;
   font-size: 12px;
   color: #6b7280;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 h1 {
@@ -202,7 +202,7 @@ h1 {
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 14px;
-  min-width: 166px;
+  min-width: 230px;
   background: #fff;
 }
 
@@ -403,7 +403,7 @@ h1 {
 .legend-chip {
   font-size: 12px;
   font-weight: 700;
-  padding: 6px 10px;
+  padding: 10px 14px;
   border-radius: 999px;
   background: #e2e8f0;
   color: #1f2937;
@@ -587,22 +587,28 @@ h1 {
 
 .sales-achievement-widget {
   overflow: visible;
+  padding-top: 26px;
+  padding-bottom: 16px;
 }
 
 .sales-achievement-widget .tower-widget-title {
-  margin-top: 10px;
+  margin-top: 16px;
   margin-bottom: 0;
   text-align: center;
   position: relative;
   z-index: 120;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .sales-stage {
   position: relative;
   width: 100%;
   max-width: 500px;
-  min-height: 330px;
+  min-height: 380px;
   margin: 0 auto;
+  margin-top: 34px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -617,13 +623,13 @@ h1 {
 }
 
 .sales-stage .weekly-pos {
-  bottom: 24px;
+  bottom: 8px;
   left: 56px;
   z-index: 2;
 }
 
 .sales-stage .monthly-pos {
-  bottom: 24px;
+  bottom: 8px;
   right: 56px;
   z-index: 2;
 }
@@ -638,15 +644,15 @@ h1 {
 .sales-label-box {
   position: relative;
   z-index: 40;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   text-align: center;
   background: rgba(255, 255, 255, 0.96);
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   white-space: nowrap;
-  min-width: 166px;
+  min-width: 230px;
 }
 
 
@@ -665,14 +671,14 @@ h1 {
 }
 
 .sales-tower-title {
-  font-size: 11px;
+  font-size: 14px;
   color: #64748b;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .sales-label-box p {
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 2px;
 }
 
@@ -687,10 +693,10 @@ h1 {
 
 .sales-over-badge {
   display: inline-flex;
-  margin-left: 6px;
-  padding: 1px 6px;
+  margin-left: 8px;
+  padding: 3px 10px;
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   color: #92400e;
   background: #fef3c7;
@@ -810,6 +816,18 @@ h1 {
 }
 
 @media (max-width: 1440px) {
+  .sales-achievement-widget .tower-widget-title {
+    font-size: 20px;
+  }
+
+  .sales-tower-title {
+    font-size: 13px;
+  }
+
+  .sales-label-box p {
+    font-size: 13px;
+  }
+
   .achievement-towers {
     grid-template-columns: 1fr;
   }
@@ -836,6 +854,26 @@ h1 {
 }
 
 @media (max-width: 760px) {
+  .sales-achievement-widget {
+    padding-top: 12px;
+  }
+
+  .sales-achievement-widget .tower-widget-title {
+    font-size: 20px;
+  }
+
+  .sales-tower-title {
+    font-size: 13px;
+  }
+
+  .sales-label-box p {
+    font-size: 13px;
+  }
+
+  .sales-label-box {
+    min-width: 190px;
+  }
+
   .sales-stage {
     min-height: 760px;
     align-items: flex-start;
