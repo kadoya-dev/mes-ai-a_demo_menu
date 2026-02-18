@@ -76,11 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     group.items.forEach((item) => createTower(item, group.prefix));
   });
 
-  const getAchievementRate = (card) => {
-    const rateText = card.querySelector("p")?.textContent ?? "0";
-    const rate = Number.parseInt(rateText, 10);
-    return Number.isNaN(rate) ? 0 : rate;
-  };
+  const getRate = (item) => Math.round((item.current / item.target) * 100);
 
   const createConfettiBurst = (achievementCount) => {
     const layer = document.createElement("div");
@@ -124,21 +120,39 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const addCelebrateButtons = () => {
-    const targetCards = Array.from(document.querySelectorAll(".metric-item.target"));
-    const achievedCards = targetCards.filter((card) => getAchievementRate(card) >= 100);
+    const totalAchievedCount = towerGroups.reduce(
+      (sum, group) => sum + group.items.filter((item) => getRate(item) >= 100).length,
+      0,
+    );
 
-    achievedCards.forEach((card) => {
-      if (card.querySelector(".celebrate-button")) {
+    if (totalAchievedCount === 0) {
+      return;
+    }
+
+    towerGroups.forEach((group) => {
+      const achievedInGroup = group.items.filter((item) => getRate(item) >= 100).length;
+
+      if (achievedInGroup === 0) {
         return;
       }
 
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "celebrate-button";
-      button.textContent = "🎉 お祝いする";
-      button.setAttribute("aria-label", "達成をお祝いする");
-      button.addEventListener("click", () => createConfettiBurst(achievedCards.length));
-      card.appendChild(button);
+      const widget = document.querySelector(
+        group.prefix
+          ? `.sales-achievement-widget[data-widget="${group.prefix}-achievement"]`
+          : '.sales-achievement-widget[data-widget="sales-achievement"]',
+      );
+
+      if (!widget || widget.querySelector('.celebrate-button')) {
+        return;
+      }
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'celebrate-button';
+      button.textContent = `🎉 達成${achievedInGroup}件をお祝い`;
+      button.setAttribute('aria-label', '達成をお祝いする');
+      button.addEventListener('click', () => createConfettiBurst(totalAchievedCount));
+      widget.appendChild(button);
     });
   };
 
