@@ -75,4 +75,72 @@ document.addEventListener("DOMContentLoaded", () => {
   towerGroups.forEach((group) => {
     group.items.forEach((item) => createTower(item, group.prefix));
   });
+
+  const getAchievementRate = (card) => {
+    const rateText = card.querySelector("p")?.textContent ?? "0";
+    const rate = Number.parseInt(rateText, 10);
+    return Number.isNaN(rate) ? 0 : rate;
+  };
+
+  const createConfettiBurst = (achievementCount) => {
+    const layer = document.createElement("div");
+    layer.className = "confetti-layer";
+    document.body.appendChild(layer);
+
+    const colors = ["#ef4444", "#f59e0b", "#facc15", "#22c55e", "#3b82f6", "#a855f7", "#ec4899"];
+    const bursts = Math.min(4, Math.max(2, achievementCount + 1));
+    const baseCount = 90 + achievementCount * 45;
+
+    for (let burst = 0; burst < bursts; burst += 1) {
+      const burstDelay = burst * 180;
+      const burstPieces = Math.round(baseCount / bursts);
+
+      window.setTimeout(() => {
+        for (let i = 0; i < burstPieces; i += 1) {
+          const piece = document.createElement("span");
+          piece.className = "confetti-piece";
+
+          const xStart = `${Math.random() * 100}vw`;
+          const xDrift = `${(Math.random() * 36 - 18).toFixed(2)}vw`;
+          const fallDuration = `${(2.2 + Math.random() * 1.5).toFixed(2)}s`;
+          const spin = `${Math.round(Math.random() * 1080 - 540)}deg`;
+
+          piece.style.setProperty("--x-start", xStart);
+          piece.style.setProperty("--x-drift", xDrift);
+          piece.style.setProperty("--fall-duration", fallDuration);
+          piece.style.setProperty("--spin", spin);
+          piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          piece.style.borderRadius = Math.random() > 0.5 ? "999px" : "3px";
+          piece.style.width = `${6 + Math.random() * 7}px`;
+          piece.style.height = `${10 + Math.random() * 10}px`;
+
+          layer.appendChild(piece);
+          window.setTimeout(() => piece.remove(), 4200);
+        }
+      }, burstDelay);
+    }
+
+    window.setTimeout(() => layer.remove(), 5200);
+  };
+
+  const addCelebrateButtons = () => {
+    const targetCards = Array.from(document.querySelectorAll(".metric-item.target"));
+    const achievedCards = targetCards.filter((card) => getAchievementRate(card) >= 100);
+
+    achievedCards.forEach((card) => {
+      if (card.querySelector(".celebrate-button")) {
+        return;
+      }
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "celebrate-button";
+      button.textContent = "🎉 お祝いする";
+      button.setAttribute("aria-label", "達成をお祝いする");
+      button.addEventListener("click", () => createConfettiBurst(achievedCards.length));
+      card.appendChild(button);
+    });
+  };
+
+  addCelebrateButtons();
 });
