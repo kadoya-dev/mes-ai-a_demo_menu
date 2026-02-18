@@ -281,6 +281,22 @@ h1 {
   border-color: #bbf7d0;
 }
 
+.metric-item.income {
+  background: #eef6ff;
+  border-color: #bfdbfe;
+}
+
+.metric-item.expense {
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.metric-item.profit {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+
 .metric-item h3 {
   font-size: 14px;
   font-weight: 700;
