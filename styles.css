@@ -351,6 +351,17 @@ h1 {
   content: "▼";
 }
 
+
+.monthly-panel .metric-item.expense small.mom-chip.mom-up {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.monthly-panel .metric-item.expense small.mom-chip.mom-down {
+  background: #dff7ea;
+  color: #138f5b;
+}
+
 .celebrate-button {
   margin: 10px auto 0;
   display: inline-flex;
