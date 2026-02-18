@@ -701,7 +701,7 @@ h1 {
 }
 
 .sales-tower-group.over-achieved .active-coin {
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -2px 0 rgba(123, 83, 0, 0.28), 0 0 10px rgba(245, 158, 11, 0.45);
+  box-shadow: 0 6px 0 #d4ac0d, 0 0 10px rgba(245, 158, 11, 0.45);
 }
 
 
@@ -757,32 +757,31 @@ h1 {
   position: absolute;
   width: 88px;
   height: 18px;
-  border-radius: 999px / 55%;
+  border-radius: 50%;
   opacity: 0;
   transform: translateY(-800px);
-  overflow: hidden;
 }
 
 .active-coin {
-  background: linear-gradient(to bottom, #f7d94a 0%, #f1c40f 38%, #dfad06 38%, #c99400 100%);
-  border: 1px solid #b88400;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -2px 0 rgba(123, 83, 0, 0.28);
+  background-color: #f1c40f;
+  border: 1px solid #d4ac0d;
+  box-shadow: 0 6px 0 #d4ac0d;
   z-index: 10;
 }
 
 .active-coin::before {
   content: "";
   position: absolute;
-  left: 6px;
-  right: 6px;
   top: 2px;
-  height: 6px;
+  left: 5px;
+  right: 5px;
+  bottom: 4px;
+  border: 1px solid rgba(184, 134, 11, 0.4);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.28);
 }
 
 .ghost-coin {
-  background: linear-gradient(to bottom, rgba(236, 239, 243, 0.35) 0%, rgba(214, 219, 224, 0.2) 40%, rgba(170, 178, 189, 0.18) 100%);
+  background-color: rgba(0, 0, 0, 0.02);
   border: 1px dashed #bdc3c7;
   z-index: 5;
 }
@@ -790,12 +789,13 @@ h1 {
 .ghost-coin::before {
   content: "";
   position: absolute;
-  left: 7px;
-  right: 7px;
   top: 2px;
-  height: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 4px;
+  border: 1px dashed #bdc3c7;
   border-radius: 50%;
-  border: 1px dashed rgba(189, 195, 199, 0.65);
+  opacity: 0.4;
 }
 
 .active-coin.animate {
