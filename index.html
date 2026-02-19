@@ -9,8 +9,8 @@
   <body>
     <div class="layout">
       <aside class="sidebar">
-        <p class="sidebar-title">≡メニュー</p>
-        <nav class="sidebar-nav">
+        <button class="sidebar-title" type="button" aria-expanded="false" aria-controls="sidebar-nav">≡メニュー</button>
+        <nav class="sidebar-nav" id="sidebar-nav">
           <a class="menu-tab active" href="#menu">TOP</a>
           <a class="menu-tab" href="#seller-research">セラーリサーチ</a>
           <a class="menu-tab" href="#asin-research">ASINリサーチ</a>
@@ -52,6 +52,15 @@
             <div class="achievement-towers">
               <article class="coin-tower-widget sales-achievement-widget" data-widget="sales-achievement">
                 <div class="sales-stage" aria-label="T売上達成率 タワー比較">
+                  <div class="sales-tower-group daily-pos">
+                    <div class="sales-label-box">
+                      <p class="sales-tower-title">デイリー</p>
+                      <p class="sales-target">目標金額: <span id="target-daily">-</span></p>
+                      <p class="sales-current">現状の金額: <span id="current-daily">-</span></p>
+                      <p class="sales-rate">達成率: <span id="rate-daily">0%</span><span class="sales-over-badge" id="over-daily" hidden></span></p>
+                    </div>
+                    <div class="sales-tower-container" id="tower-daily" aria-hidden="true"></div>
+                  </div>
                   <div class="sales-tower-group weekly-pos">
                     <div class="sales-label-box">
                       <p class="sales-tower-title">ウィークリー</p>
@@ -70,20 +79,20 @@
                     </div>
                     <div class="sales-tower-container" id="tower-monthly" aria-hidden="true"></div>
                   </div>
-                  <div class="sales-tower-group daily-pos">
-                    <div class="sales-label-box">
-                      <p class="sales-tower-title">デイリー</p>
-                      <p class="sales-target">目標金額: <span id="target-daily">-</span></p>
-                      <p class="sales-current">現状の金額: <span id="current-daily">-</span></p>
-                      <p class="sales-rate">達成率: <span id="rate-daily">0%</span><span class="sales-over-badge" id="over-daily" hidden></span></p>
-                    </div>
-                    <div class="sales-tower-container" id="tower-daily" aria-hidden="true"></div>
-                  </div>
                 </div>
                 <h3 class="tower-widget-title">T売上達成率</h3>
               </article>
               <article class="coin-tower-widget sales-achievement-widget profit-achievement-widget" data-widget="profit-achievement">
                 <div class="sales-stage" aria-label="T利益達成率 タワー比較">
+                  <div class="sales-tower-group daily-pos">
+                    <div class="sales-label-box">
+                      <p class="sales-tower-title">デイリー</p>
+                      <p class="sales-target">目標金額: <span id="profit-target-daily">-</span></p>
+                      <p class="sales-current">現状の金額: <span id="profit-current-daily">-</span></p>
+                      <p class="sales-rate">達成率: <span id="profit-rate-daily">0%</span><span class="sales-over-badge" id="profit-over-daily" hidden></span></p>
+                    </div>
+                    <div class="sales-tower-container" id="profit-tower-daily" aria-hidden="true"></div>
+                  </div>
                   <div class="sales-tower-group weekly-pos">
                     <div class="sales-label-box">
                       <p class="sales-tower-title">ウィークリー</p>
@@ -102,15 +111,6 @@
                     </div>
                     <div class="sales-tower-container" id="profit-tower-monthly" aria-hidden="true"></div>
                   </div>
-                  <div class="sales-tower-group daily-pos">
-                    <div class="sales-label-box">
-                      <p class="sales-tower-title">デイリー</p>
-                      <p class="sales-target">目標金額: <span id="profit-target-daily">-</span></p>
-                      <p class="sales-current">現状の金額: <span id="profit-current-daily">-</span></p>
-                      <p class="sales-rate">達成率: <span id="profit-rate-daily">0%</span><span class="sales-over-badge" id="profit-over-daily" hidden></span></p>
-                    </div>
-                    <div class="sales-tower-container" id="profit-tower-daily" aria-hidden="true"></div>
-                  </div>
                 </div>
                 <h3 class="tower-widget-title">T利益達成率</h3>
               </article>
@@ -126,8 +126,8 @@
               <article class="metric-item expense"><h3>仕入れ額</h3><p>¥286,000</p></article>
               <article class="metric-item profit"><h3>粗利益額</h3><p>¥126,000</p></article>
               <article class="metric-item profit"><h3>粗利益率</h3><p>30.6%</p></article>
-              <article class="metric-item target"><h3>T売上達成率</h3><p>82%</p><span>💰+1,000円</span></article>
-              <article class="metric-item target"><h3>T利益達成率</h3><p>68%</p><span>💸-500円</span></article>
+              <article class="metric-item target" data-target-type="sales"><h3>T売上達成率</h3><p>82%</p><span>💰+1,000円</span></article>
+              <article class="metric-item target" data-target-type="profit"><h3>T利益達成率</h3><p>68%</p><span>💸-500円</span></article>
             </div>
           </section>
 
@@ -140,8 +140,8 @@
               <article class="metric-item expense"><h3>仕入れ額</h3><p>¥2,031,000</p></article>
               <article class="metric-item profit"><h3>粗利益額</h3><p>¥853,000</p></article>
               <article class="metric-item profit"><h3>粗利益率</h3><p>29.6%</p></article>
-              <article class="metric-item target"><h3>T売上達成率</h3><p>94%</p><span>💸-500円</span></article>
-              <article class="metric-item target"><h3>T利益達成率</h3><p>88%</p><span>💸-2,000円</span></article>
+              <article class="metric-item target" data-target-type="sales"><h3>T売上達成率</h3><p>94%</p><span>💸-500円</span></article>
+              <article class="metric-item target" data-target-type="profit"><h3>T利益達成率</h3><p>88%</p><span>💸-2,000円</span></article>
             </div>
           </section>
 
@@ -154,8 +154,8 @@
               <article class="metric-item expense"><h3>仕入れ額</h3><p>¥8,940,000</p><small>前月比+3%</small></article>
               <article class="metric-item profit"><h3>粗利益額</h3><p>¥3,520,000</p><small>前月比+11%</small></article>
               <article class="metric-item profit"><h3>粗利益率</h3><p>28.2%</p></article>
-              <article class="metric-item target"><h3>T売上達成率</h3><p>101%</p><span>💰+1,000円</span></article>
-              <article class="metric-item target"><h3>T利益達成率</h3><p>97%</p><span>💸-500円</span></article>
+              <article class="metric-item target" data-target-type="sales"><h3>T売上達成率</h3><p>101%</p><span>💰+1,000円</span></article>
+              <article class="metric-item target" data-target-type="profit"><h3>T利益達成率</h3><p>97%</p><span>💸-500円</span></article>
             </div>
           </section>
         </main>
