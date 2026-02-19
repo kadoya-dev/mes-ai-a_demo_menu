@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     targetCards.forEach((card) => {
       const percentText = card.querySelector('p')?.textContent ?? '0%';
       const rate = Number.parseInt(percentText.replace(/[^0-9]/g, ''), 10) || 0;
-      const miniCoinSlots = 14;
+      const miniCoinSlots = 18;
       const activeCoins = Math.max(1, Math.min(miniCoinSlots, Math.round((Math.min(rate, 100) / 100) * miniCoinSlots)));
       const panelId = card.closest('section.panel')?.id ?? '';
 
