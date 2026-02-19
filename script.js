@@ -140,20 +140,20 @@ document.addEventListener("DOMContentLoaded", () => {
     targetCards.forEach((card) => {
       const percentText = card.querySelector('p')?.textContent ?? '0%';
       const rate = Number.parseInt(percentText.replace(/[^0-9]/g, ''), 10) || 0;
-      const activeCoins = Math.max(1, Math.min(10, Math.round((Math.min(rate, 100) / 100) * 10)));
+      const miniCoinSlots = 14;
+      const activeCoins = Math.max(1, Math.min(miniCoinSlots, Math.round((Math.min(rate, 100) / 100) * miniCoinSlots)));
       const panelId = card.closest('section.panel')?.id ?? '';
 
       if (panelId) {
         card.classList.add(`period-${panelId}`);
       }
 
-      card.classList.add('target-layout-a');
 
       const miniTower = document.createElement('div');
       miniTower.className = 'mini-target-tower';
       miniTower.setAttribute('aria-hidden', 'true');
 
-      for (let i = 0; i < 10; i += 1) {
+      for (let i = 0; i < miniCoinSlots; i += 1) {
         const slot = document.createElement('div');
         slot.className = 'mini-coin-slot';
 
@@ -174,27 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const initMiniTowerLayoutSwitch = () => {
-    const buttons = Array.from(document.querySelectorAll('.tower-layout-button'));
-
-    const applyLayout = (layout) => {
-      const targetCards = document.querySelectorAll('.metric-item.target');
-      targetCards.forEach((card) => {
-        card.classList.toggle('target-layout-a', layout === 'a');
-        card.classList.toggle('target-layout-b', layout === 'b');
-      });
-
-      buttons.forEach((button) => {
-        button.classList.toggle('active', button.dataset.layout === layout);
-      });
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => applyLayout(button.dataset.layout ?? 'a'));
-    });
-
-    applyLayout('a');
-  };
 
   const initSidebarAccordion = () => {
     const menuButton = document.querySelector('.sidebar-title');
@@ -249,6 +228,5 @@ document.addEventListener("DOMContentLoaded", () => {
   addCelebrateButtons();
   styleMonthlyComparisonChips();
   addMiniTowersToTargetCards();
-  initMiniTowerLayoutSwitch();
   initSidebarAccordion();
 });

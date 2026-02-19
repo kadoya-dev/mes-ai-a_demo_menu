@@ -131,29 +131,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.tower-layout-switch {
-  display: inline-flex;
-  gap: 8px;
-  padding: 4px;
-  border-radius: 999px;
-  background: #f1f5f9;
-}
-
-.tower-layout-button {
-  border: none;
-  border-radius: 999px;
-  background: transparent;
-  color: #334155;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.tower-layout-button.active {
-  background: #1d4ed8;
-  color: #ffffff;
-}
 
 .panel-header h2 {
   font-size: 14px;
@@ -330,10 +307,6 @@ h1 {
   padding-right: 84px;
 }
 
-.metric-item.target.target-layout-b {
-  padding-right: 14px;
-  padding-bottom: 78px;
-}
 
 .mini-target-tower {
   position: absolute;
@@ -345,11 +318,6 @@ h1 {
   align-items: center;
 }
 
-.metric-item.target.target-layout-b .mini-target-tower {
-  right: 50%;
-  transform: translateX(50%);
-  width: 68px;
-}
 
 .mini-coin-slot {
   position: relative;
@@ -358,10 +326,6 @@ h1 {
   margin-bottom: -3px;
 }
 
-.metric-item.target.target-layout-b .mini-coin-slot {
-  width: 52px;
-  height: 9px;
-}
 
 .mini-coin,
 .mini-ghost-coin {
@@ -790,23 +754,6 @@ h1 {
     left: 12px;
     width: calc(100% - 24px);
     max-width: 260px;
-  }
-
-  .sidebar-toggle {
-    width: auto;
-    min-width: 64px;
-  }
-
-  body.sidebar-collapsed .sidebar-title,
-  body.sidebar-collapsed .sidebar-nav {
-    opacity: 1;
-    pointer-events: auto;
-    height: auto;
-  }
-
-  body.sidebar-collapsed .sidebar {
-    width: 100%;
-    padding: 16px 16px 20px;
   }
 
   .page-header {
