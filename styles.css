@@ -711,17 +711,18 @@ h1 {
 .sales-stage {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  min-height: 380px;
+  max-width: 760px;
+  min-height: 0;
   margin: 0 auto;
   margin-top: 34px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 34px;
 }
 
 .sales-tower-group {
-  position: absolute;
+  position: relative;
   isolation: isolate;
   display: flex;
   flex-direction: column;
@@ -729,21 +730,14 @@ h1 {
 }
 
 .sales-stage .weekly-pos {
-  bottom: 8px;
-  left: 56px;
   z-index: 2;
 }
 
 .sales-stage .monthly-pos {
-  bottom: 8px;
-  right: 56px;
   z-index: 2;
 }
 
 .sales-stage .daily-pos {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 10;
 }
 
@@ -762,13 +756,8 @@ h1 {
 }
 
 
-.sales-stage .weekly-pos .sales-label-box {
-  transform: translate(-34px, -2px);
-  z-index: 70;
-}
-
+.sales-stage .weekly-pos .sales-label-box,
 .sales-stage .monthly-pos .sales-label-box {
-  transform: translate(34px, -2px);
   z-index: 70;
 }
 
@@ -939,23 +928,8 @@ h1 {
   }
 
   .sales-stage {
-    max-width: 580px;
-  }
-
-  .sales-stage .weekly-pos {
-    left: 80px;
-  }
-
-  .sales-stage .monthly-pos {
-    right: 80px;
-  }
-
-  .sales-stage .weekly-pos .sales-label-box {
-    transform: translate(-18px, -2px);
-  }
-
-  .sales-stage .monthly-pos .sales-label-box {
-    transform: translate(18px, -2px);
+    max-width: 760px;
+    gap: 20px;
   }
 }
 
@@ -981,9 +955,11 @@ h1 {
   }
 
   .sales-stage {
-    min-height: 760px;
+    min-height: 0;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .sales-tower-group {
