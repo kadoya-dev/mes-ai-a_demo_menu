@@ -16,66 +16,54 @@ body {
 }
 
 .layout {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  display: block;
 }
 
 .sidebar {
-  width: 220px;
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 16px 16px 20px;
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
-  position: sticky;
+  position: fixed;
   top: 24px;
-  transition: width 0.28s ease, padding 0.28s ease;
-  overflow: hidden;
-}
-
-.sidebar-toggle {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  background: #e2e8f0;
-  color: #1e293b;
-  font-weight: 800;
-  font-size: 13px;
-  padding: 8px 10px;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-body.sidebar-collapsed .sidebar {
-  width: 70px;
-  padding: 12px 10px;
-}
-
-body.sidebar-collapsed .sidebar-title,
-body.sidebar-collapsed .sidebar-nav {
-  opacity: 0;
-  pointer-events: none;
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-body.sidebar-collapsed .sidebar-toggle {
-  margin-bottom: 0;
+  left: 24px;
+  z-index: 1400;
+  width: 220px;
 }
 
 .sidebar-title {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: #1d4ed8;
+  color: #ffffff;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
-  color: #6b7280;
-  margin-bottom: 16px;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(29, 78, 216, 0.28);
 }
 
 .sidebar-nav {
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+  display: grid;
   gap: 10px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: max-height 0.22s ease, opacity 0.2s ease, transform 0.2s ease, padding 0.2s ease;
+}
+
+body.menu-open .sidebar-nav {
+  max-height: 320px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  padding: 12px;
 }
 
 .menu-tab {
@@ -375,10 +363,23 @@ h1 {
   height: 9px;
 }
 
-.mini-coin {
+.mini-coin,
+.mini-ghost-coin {
   width: 100%;
   height: 100%;
   border-radius: 999px;
+}
+
+.mini-ghost-coin {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed #94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.mini-coin {
+  position: absolute;
+  inset: 0;
   background: var(--mini-coin-main, #f1c40f);
   border: 1px solid var(--mini-coin-edge, #d4ac0d);
   box-shadow: 0 2px 0 var(--mini-coin-edge, #d4ac0d);
@@ -781,12 +782,14 @@ h1 {
   }
 
   .layout {
-    flex-direction: column;
+    display: block;
   }
 
   .sidebar {
-    width: 100%;
-    position: static;
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    max-width: 260px;
   }
 
   .sidebar-toggle {

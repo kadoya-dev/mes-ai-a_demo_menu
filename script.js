@@ -157,6 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const slot = document.createElement('div');
         slot.className = 'mini-coin-slot';
 
+        const ghostCoin = document.createElement('div');
+        ghostCoin.className = 'mini-ghost-coin';
+        slot.appendChild(ghostCoin);
+
         if (i < activeCoins) {
           const coin = document.createElement('div');
           coin.className = 'mini-coin';
@@ -193,16 +197,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const initSidebarAccordion = () => {
-    const toggleButton = document.querySelector('.sidebar-toggle');
+    const menuButton = document.querySelector('.sidebar-title');
 
-    if (!toggleButton) {
+    if (!menuButton) {
       return;
     }
 
-    toggleButton.addEventListener('click', () => {
-      const collapsed = document.body.classList.toggle('sidebar-collapsed');
-      toggleButton.setAttribute('aria-expanded', String(!collapsed));
-      toggleButton.textContent = collapsed ? '▶' : '◀';
+    menuButton.addEventListener('click', () => {
+      const isOpen = document.body.classList.toggle('menu-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
     });
   };
 
